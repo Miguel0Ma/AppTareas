@@ -6,6 +6,7 @@ public class Tarea {
     private String descripcion;
     private boolean completada;
     private String tipo;
+    public boolean isCompletada;
 
 
     private Tarea(TareaBuilder builder){
@@ -15,6 +16,26 @@ public class Tarea {
         this.completada=builder.completada;
         this.tipo=builder.tipo;
 
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public boolean isCompletada() {
+        return completada;
+    }
+
+    public String getTipo() {
+        return tipo;
     }
 
 
@@ -29,24 +50,24 @@ public class Tarea {
             return new Tarea(this);
         }
 
-        public TareaBuilder setId(String id){
+        public TareaBuilder Id(String id){
             this.id=id;
             return this;
         }
         
-        public TareaBuilder setTitulo(String titulo){
+        public TareaBuilder Titulo(String titulo){
             this.titulo=titulo;
             return this;
         }
-        public TareaBuilder setDescripcion(String descripcion){
+        public TareaBuilder Descripcion(String descripcion){
             this.descripcion=descripcion;
             return this;
         }
-        public TareaBuilder setCompletada(boolean completada){
+        public TareaBuilder Completada(boolean completada){
             this.completada=completada;
             return this;
         }
-        public TareaBuilder setTipo(String tipo){
+        public TareaBuilder Tipo(String tipo){
             this.tipo=tipo;
             return this;
         }
