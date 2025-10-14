@@ -7,15 +7,15 @@ public class TareaFactory {
         switch (tipo.toLowerCase()) {
             case "urgente":
                 // Configuraciones específicas para tarea urgente
-                builder.setTitulo("Tarea Urgente").setDescripcion("Descripción por defecto para tarea urgente");
+                builder.setTipo("Urgente").setDescripcion("Realizar esta tarea los mas antes posible ");
                 break;
             case "normal":
                 // Configuraciones específicas para tarea normal
-                builder.setTitulo("Tarea Normal").setDescripcion("Descripción por defecto para tarea normal");
+                builder.setTipo("Normal").setDescripcion("No dejar pasar");
                 break;
             default:
                 // Configuración por defecto
-                builder.setTitulo("Tarea").setDescripcion("Descripción por defecto");
+                builder.setTipo("Tarea").setDescripcion("Hacer");
                 break;
         }
 
