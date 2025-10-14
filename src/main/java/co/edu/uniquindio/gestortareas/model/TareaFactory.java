@@ -2,20 +2,20 @@ package co.edu.uniquindio.gestortareas.model;
 
 public class TareaFactory {
     public static Tarea build(String tipo) {
-        Tarea.TareaBuilder builder = new Tarea.TareaBuilder().setTipo(tipo).setCompletada(false);
+        Tarea.TareaBuilder builder = new Tarea.TareaBuilder().Tipo(tipo).Completada(false);
 
         switch (tipo.toLowerCase()) {
             case "urgente":
                 // Configuraciones específicas para tarea urgente
-                builder.setTipo("Urgente").setDescripcion("Realizar esta tarea los mas antes posible ");
+                builder.Tipo("Urgente").Descripcion("Realizar esta tarea los mas antes posible ");
                 break;
             case "normal":
                 // Configuraciones específicas para tarea normal
-                builder.setTipo("Normal").setDescripcion("No dejar pasar");
+                builder.Tipo("Normal").Descripcion("No dejar pasar");
                 break;
             default:
                 // Configuración por defecto
-                builder.setTipo("Tarea").setDescripcion("Hacer");
+                builder.Tipo("Tarea").Descripcion("Hacer");
                 break;
         }
 
