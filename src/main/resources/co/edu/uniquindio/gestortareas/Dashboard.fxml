@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.edu.uniquindio.gestortareas.controller.DashboardController"
-            prefHeight="400.0" prefWidth="600.0">
-    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
-        <Label text="Dashboard de Tareas" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gestortareas.controller.DashboardController">
+    <VBox spacing="10" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Dashboard de Tareas" />
         <HBox spacing="20">
             <VBox spacing="5">
                 <Label text="Total de Tareas:" />
-                <Label fx:id="lblTotalTareas" text="0" style="-fx-font-size: 14px;" />
+                <Label fx:id="lblTotalTareas" style="-fx-font-size: 14px;" text="0" />
             </VBox>
             <VBox spacing="5">
                 <Label text="Completadas:" />
-                <Label fx:id="lblCompletadas" text="0" style="-fx-font-size: 14px;" />
+                <Label fx:id="lblCompletadas" style="-fx-font-size: 14px;" text="0" />
             </VBox>
             <VBox spacing="5">
                 <Label text="Pendientes:" />
-                <Label fx:id="lblPendientes" text="0" style="-fx-font-size: 14px;" />
+                <Label fx:id="lblPendientes" style="-fx-font-size: 14px;" text="0" />
             </VBox>
         </HBox>
         <ListView fx:id="listTareasRecientes" prefHeight="200" />
         <HBox spacing="10">
-            <Button fx:id="btnVerLista" text="Ver Lista Completa" onAction="#irAListaTareas" />
-            <Button fx:id="btnAgregarTarea" text="Agregar Tarea" onAction="#irAAgregarTarea" />
+            <Button fx:id="btnAgregarTarea" onAction="#irAAgregarTarea" text="Agregar Tarea" />
+            <Button fx:id="btnEliminarTarea" onAction="#eliminarTareaSeleccionada" text="Eliminar Tarea Seleccionada" />
+            <Button fx:id="btnCambiarEstado" onAction="#cambiarEstadoTareaSeleccionada" text="Cambiar Estado Tarea" />
         </HBox>
     </VBox>
 </AnchorPane>

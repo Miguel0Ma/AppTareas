@@ -99,5 +99,21 @@ public class TareaMangment {
             tareas.set(index, nuevaTarea);
         }
     }
-    
+
+    public void cambiarEstadoTarea(String id) {
+        Tarea tarea = buscarTareaPorId(id);
+        if (tarea != null) {
+            boolean nuevoEstado = !tarea.isCompletada();
+            Tarea nuevaTarea = new Tarea.TareaBuilder()
+                .Id(tarea.getId())
+                .Titulo(tarea.getTitulo())
+                .Descripcion(tarea.getDescripcion())
+                .Completada(true)
+                .Tipo(tarea.getTipo())
+                .build();
+            int index = tareas.indexOf(tarea);
+            tareas.set(index, nuevaTarea);
+        }
+    }
+
 }

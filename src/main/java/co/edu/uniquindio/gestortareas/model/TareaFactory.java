@@ -6,15 +6,12 @@ public class TareaFactory {
 
         switch (tipo.toLowerCase()) {
             case "urgente":
-                // Configuraciones específicas para tarea urgente
                 builder.Tipo("Urgente").Descripcion("Realizar esta tarea los mas antes posible ");
                 break;
             case "normal":
-                // Configuraciones específicas para tarea normal
                 builder.Tipo("Normal").Descripcion("No dejar pasar");
                 break;
             default:
-                // Configuración por defecto
                 builder.Tipo("Tarea").Descripcion("Hacer");
                 break;
         }
